@@ -3,17 +3,20 @@ import MovieVideos from "../../../../components/movie-videos";
 import { Suspense } from "react";
 
 type IParams = {
-  params: { id: string }
+  params: Promise<{ id: string }>
 };
 
-export async function generateMetadata({ params: { id } }: IParams) {
+export async function generateMetadata({ params }: IParams) {
+  const { id } = await params;
   const movie = await getMovie(id);
   return {
     title: movie.title,
-  }
+  };
 }
 
-const Movie = ({ params: { id } }: IParams) => {
+const Movie = async ({ params }: IParams) => {
+  const { id } = await params;
+
   return (
     <>
       <Suspense fallback={<h2>Loading movie info</h2>}>

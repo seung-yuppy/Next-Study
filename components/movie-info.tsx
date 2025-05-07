@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { MOVIES_URL } from "../app/(home)/page";
 import styles from "../styles/movie-info.module.css"
+import { MOVIES_URL } from "../app/constant";
 
 export const getMovie = async (id: string) => {
   const response = await fetch(`${MOVIES_URL}/${id}`);
