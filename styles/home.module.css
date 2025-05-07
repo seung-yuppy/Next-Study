@@ -1,0 +1,9 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+  max-width: 80%;
+  width: 100%;
+  margin: 0 auto; /* 위아래는 값을 안주고 좌우를 균등하게 주어 중앙에 둠 */
+  margin-top: 125px;
+}
