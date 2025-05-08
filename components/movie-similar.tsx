@@ -17,7 +17,7 @@ const MovieSimilar = async ({ id }: { id: string }) => {
           <Link href={`/movies/${similar.id}`}>
             <div className={styles.container} key={similar.id}>
               <img src={similar.poster_path} className={styles.poster} />
-              <h2 className={styles.movieTitle}>{similar.title}</h2>
+              <h2 className={styles.movieTitle}>{similar.title} &rarr;</h2>
             </div>
           </Link>
         ))}

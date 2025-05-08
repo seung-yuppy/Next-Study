@@ -8,7 +8,6 @@ export default function AboutUsLayout({
   return (
     <div>
       {children}
-      &copy; Next JS is Great!
     </div>
   )
 }
