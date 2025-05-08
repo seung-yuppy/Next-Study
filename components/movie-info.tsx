@@ -1,11 +1,12 @@
 import Link from "next/link";
 import styles from "../styles/movie-info.module.css"
 import { MOVIES_URL } from "../app/constant";
+import MovieCredits from "./movie-credits";
+import { Suspense } from "react";
 
 export const getMovie = async (id: string) => {
   const response = await fetch(`${MOVIES_URL}/${id}`);
-  const data = await response.json();
-  return data;
+  return response.json();
 };
 
 const MovieInfo = async ({ id }: { id: string }) => {
@@ -19,6 +20,9 @@ const MovieInfo = async ({ id }: { id: string }) => {
         <h3>⭐️ {movie.vote_average.toFixed(1)}</h3>
         <p>{movie.overview}</p>
         <Link href={movie.homepage} target={"_blank"}>Homepage &rarr;</Link>
+        <Suspense fallback={<h2>Loading Credits...</h2>}>
+          <MovieCredits id={id} />
+        </Suspense>
       </div>
     </div>
   );

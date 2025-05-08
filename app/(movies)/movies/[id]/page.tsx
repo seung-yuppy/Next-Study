@@ -1,4 +1,5 @@
 import MovieInfo, { getMovie } from "../../../../components/movie-info";
+import MovieSimilar from "../../../../components/movie-similar";
 import MovieVideos from "../../../../components/movie-videos";
 import { Suspense } from "react";
 
@@ -21,6 +22,9 @@ const Movie = async ({ params }: IParams) => {
     <>
       <Suspense fallback={<h2>Loading movie info</h2>}>
         <MovieInfo id={id} />
+      </Suspense>
+      <Suspense fallback={<h2>Loading similar movies...</h2>}>
+        <MovieSimilar id={id} />
       </Suspense>
       <Suspense fallback={<h2>Loading movie videos</h2>}>
         <MovieVideos id={id} />

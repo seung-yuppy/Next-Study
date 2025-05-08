@@ -4,11 +4,12 @@
   gap: 50px;
   width: 80%;
   margin: 0 auto;
+  margin-top: 100px;
 }
 
 .poster {
   border-radius: 20px;
-  max-width: 70%;
+  max-width: 80%;
   place-self: center;
 }
 
@@ -21,6 +22,5 @@
 .info {
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
   gap: 20px;
 }

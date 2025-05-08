@@ -1,0 +1,12 @@
+.wrapper {
+  display: flex;
+  gap: 30px;
+}
+
+.credits {
+  width: 200px;
+}
+
+.container {
+  text-align: center;
+}

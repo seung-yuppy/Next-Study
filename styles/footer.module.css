@@ -1,0 +1,11 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 20px;
+}
